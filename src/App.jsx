@@ -780,11 +780,14 @@ const App = () => {
                   )}
                   
                   <div className="w-full h-full rounded-full overflow-hidden border-4 border-gray-800 shadow-2xl relative">
-                    <img 
-                        src="/images/tiit.jpg" 
-                        alt="Avatar" 
-                        className={`w-full h-full object-cover transition-all duration-1000 ${scanComplete ? 'grayscale-0' : 'grayscale'}`} 
-                        onError={(e) => { e.target.style.display='none'; e.target.parentNode.style.backgroundColor='#1a1a1a'; }} 
+                    <img
+                        src="/images/tiit.jpg"
+                        alt="Avatar"
+                        className={`w-full h-full object-cover transition-all duration-1000 ${scanComplete ? 'grayscale-0' : 'grayscale'}`}
+                        onError={(e) => { e.target.style.display='none'; e.target.parentNode.style.backgroundColor='#1a1a1a'; }}
+                        onContextMenu={(e) => e.preventDefault()}
+                        draggable={false}
+                        style={{ userSelect: 'none', WebkitUserDrag: 'none' }}
                     />
                     
                     {!scanComplete && (
@@ -1394,7 +1397,7 @@ const App = () => {
       
       <div className="space-y-6">
         {[
-          { name: "Stranger Things", tag: "Mystère & 80s", img: "/images/passions/st.jpg", color: "group-hover:text-red-500" },
+          { name: "The Eight", tag: "Série Énigmatique", img: "src/assets/theight.jpeg", color: "group-hover:text-red-500" },
           { name: "Echoes of the Past", tag: "Drame Égyptien", img: "/images/passions/echo.webp", color: "group-hover:text-yellow-500" }
         ].map((item, i) => (
           <div key={i} className="flex items-center gap-4 group/item cursor-pointer">
@@ -1427,7 +1430,7 @@ const App = () => {
       
       <div className="space-y-6">
         {[
-          { name: "Football Manager", tag: "Stratégie", img: "/images/fm.avif", color: "group-hover:text-purple-400" },
+          { name: "FC 27", tag: "Tactique", img: "src/assets/fc27.jpeg", color: "group-hover:text-purple-400" },
           { name: "The Last of Us", tag: "Narratif", img: "/images/last.jpg", color: "group-hover:text-cyan-500" }
         ].map((item, i) => (
           <div key={i} className="flex items-center gap-4 group/item cursor-pointer">
