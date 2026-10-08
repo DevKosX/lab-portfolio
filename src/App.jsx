@@ -837,7 +837,7 @@ const App = () => {
 
             <div className="lg:col-span-2 space-y-6">
               {[
-                  { icon: <GraduationCap />, title: "Formation Académique", text: "Je suis actuellement en 3ème année de BUT Informatique dans un parcours axé sur l'architecture logicielle, l'algorithmique complexe et les bases de données." },
+                  { icon: <GraduationCap />, title: "Formation Académique", text: "Diplômé de BUT Informatique avec un parcours axé sur l'architecture logicielle, l'algorithmique complexe et les bases de données." },
                   { icon: <BrainCircuit />, title: "Vision technique", text: "Je détiens une polyvalence au niveaud du backend avec des langages comme (Java, PHP, Postgres) & Frontend (React, Tailwind). J'ai aussi une approche dédié sur la qualité de mon code avec les méthodes (Clean Code, SOLID) et l'UX." },
                   { icon: <Rocket />, title: "Mission Actuelle", text: "À la recherche d'un contrat d'alternance de 3 ans pour école d'ingénieur." }
               ].map((item, idx) => (
@@ -1291,7 +1291,7 @@ const App = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-96">
         <div onClick={() => setActiveTrip('egypt')} className="relative rounded-3xl overflow-hidden cursor-pointer group shadow-2xl border border-transparent hover:border-amber-500/50 transition-all duration-300">
           <img src="/images/passions/jardin.jpg" alt="Egypte" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent group-hover:bg-black/60 transition-colors" />
+          <div className={`absolute inset-0 bg-gradient-to-t ${isDarkMode ? 'from-black/90 via-black/40' : 'from-gray-900/95 via-gray-900/70'} to-transparent group-hover:bg-black/60 transition-colors`} />
           <div className="absolute bottom-0 left-0 p-8 w-full translate-y-2 group-hover:translate-y-0 transition-transform">
             <span className="text-amber-400 font-bold tracking-widest text-sm uppercase mb-2 block">Origines paternelles</span>
             <h4 className="text-4xl font-extrabold text-white mb-2">Égypte</h4>
@@ -1299,7 +1299,7 @@ const App = () => {
         </div>
         <div onClick={() => setActiveTrip('morocco')} className="relative rounded-3xl overflow-hidden cursor-pointer group shadow-2xl border border-transparent hover:border-red-500/50 transition-all duration-300">
           <img src="/images/passions/casa.png" alt="Maroc" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent group-hover:bg-black/60 transition-colors" />
+          <div className={`absolute inset-0 bg-gradient-to-t ${isDarkMode ? 'from-black/90 via-black/40' : 'from-gray-900/95 via-gray-900/70'} to-transparent group-hover:bg-black/60 transition-colors`} />
           <div className="absolute bottom-0 left-0 p-8 w-full translate-y-2 group-hover:translate-y-0 transition-transform">
             <span className="text-red-400 font-bold tracking-widest text-sm uppercase mb-2 block">Origines maternelles</span>
             <h4 className="text-4xl font-extrabold text-white mb-2">Maroc</h4>
@@ -1334,10 +1334,10 @@ const App = () => {
           {tripDetails[activeTrip].locations && (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               {tripDetails[activeTrip].locations.map((loc, i) => (
-                <div key={i} className="bg-slate-900/40 rounded-2xl p-4 border border-white/5">
+                <div key={i} className={`${isDarkMode ? 'bg-slate-900/40' : 'bg-gray-100'} rounded-2xl p-4 border ${isDarkMode ? 'border-white/5' : 'border-gray-200'}`}>
                   <img src={loc.img} className="h-40 w-full object-cover rounded-xl mb-4" />
                   <h5 className={`font-bold ${tripDetails[activeTrip].accent} mb-1`}>{loc.name}</h5>
-                  <p className="text-sm text-gray-400">{loc.desc}</p>
+                  <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>{loc.desc}</p>
                 </div>
               ))}
             </div>
@@ -1357,7 +1357,7 @@ const App = () => {
         {/* CARTE FOOTBALL (Large) */}
         <div onClick={() => setActiveTrip('football')} className="relative h-80 rounded-3xl overflow-hidden cursor-pointer group shadow-2xl border border-transparent hover:border-green-500/50 transition-all duration-300">
           <img src="/images/football.jpg" alt="Football" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent group-hover:bg-black/60 transition-colors" />
+          <div className={`absolute inset-0 bg-gradient-to-r ${isDarkMode ? 'from-black via-black/40' : 'from-gray-900 via-gray-900/70'} to-transparent group-hover:bg-black/60 transition-colors`} />
           <div className="absolute bottom-0 left-0 p-8 w-full translate-y-2 group-hover:translate-y-0 transition-transform">
             <span className="text-cyan-500 font-bold tracking-widest text-sm uppercase mb-2 block flex items-center gap-2"><Trophy className="w-4 h-4"/> U17 Nationaux</span>
             <h4 className="text-4xl font-extrabold text-white mb-2 tracking-tighter">Football</h4>
@@ -1368,7 +1368,7 @@ const App = () => {
         {/* CARTE NATATION (Large) */}
         <div onClick={() => setActiveTrip('natation')} className="relative h-80 rounded-3xl overflow-hidden cursor-pointer group shadow-2xl border border-transparent hover:border-teal-500/50 transition-all duration-300">
           <img src="/images/natation.jpg" alt="Natation" className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent group-hover:bg-black/60 transition-colors" />
+          <div className={`absolute inset-0 bg-gradient-to-r ${isDarkMode ? 'from-black via-black/40' : 'from-gray-900 via-gray-900/70'} to-transparent group-hover:bg-black/60 transition-colors`} />
           <div className="absolute bottom-0 left-0 p-8 w-full translate-y-2 group-hover:translate-y-0 transition-transform">
             <span className="text-teal-400 font-bold tracking-widest text-sm uppercase mb-2 block flex items-center gap-2"><Waves className="w-4 h-4"/> Discipline & Exploration</span>
             <h4 className="text-4xl font-extrabold text-white mb-2 tracking-tighter">Natation</h4>
