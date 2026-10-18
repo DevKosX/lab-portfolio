@@ -1474,7 +1474,7 @@ const App = () => {
                      </div>
                      <div className="flex items-start gap-4">
                         <div className="p-3 bg-purple-500/10 rounded-lg text-purple-500 mt-1"><MapPin className="w-6 h-6" /></div>
-                        <div><p className="text-sm font-bold uppercase tracking-wider text-gray-500 mb-1">Localisation</p><p className={`text-xl font-medium ${themeClasses.text}`}>Aubervilliers, France</p><p className="text-sm text-gray-500 mt-1">Disponible en télétravail & sur site</p></div>
+                        <div><p className="text-sm font-bold uppercase tracking-wider text-gray-500 mb-1">Localisation</p><p className={`text-xl font-medium ${themeClasses.text}`}>Paris, France</p><p className="text-sm text-gray-500 mt-1">Disponible en télétravail & sur site</p></div>
                      </div>
                      <div className="flex items-start gap-4">
                         <div className="p-3 bg-blue-500/10 rounded-lg text-blue-500 mt-1"><Briefcase className="w-6 h-6" /></div>
