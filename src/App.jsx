@@ -400,6 +400,17 @@ const App = () => {
   const projects = [
     {
       id: 1,
+      title: "Tingo",
+      desc: "App de découverte d'activités en Égypte avec recommandations personnalisées.",
+      longDesc: "Application mobile de découverte d'activités touristiques en Égypte. Système de recommandations intelligent basé sur la ville, le groupe et les préférences utilisateur. Navigation responsive avec header desktop et bottom nav mobile.",
+      features: ["Recommandations personnalisées", "Navigation responsive", "Favoris localStorage", "Tri algorithmique multi-critères"],
+      tags: ["React", "localStorage", "REST API", "Pagination"],
+      image: "/images/tingo.jpg",
+      github: "https://github.com/DevKosX/Tingo",
+      icon: <MapPin className="w-10 h-10 text-teal-400" />
+    },
+    {
+      id: 2,
       title: "Frigo Recette",
       desc: "Application intelligente qui génère des recettes basées sur le contenu de votre frigo.",
       longDesc: "Face au gaspillage alimentaire, j'ai conçu cette solution mobile en Dart/Flutter. L'application croise votre stock réel avec une base de données culinaire. Le défi technique résidait dans l'optimisation des requêtes SQLite locales pour garantir une fluidité parfaite hors ligne.",
@@ -410,7 +421,7 @@ const App = () => {
       icon: <Database className="w-10 h-10 text-teal-400" />
     },
     {
-      id: 2,
+      id: 3,
       title: "Find My Word",
       desc: "Jeu interactif de devinette de mots en temps réel.",
       longDesc: "Projet Swing/Java démontrant une robustesse logicielle via une approche TDD stricte avec JUnit. Chaque interaction est testée pour garantir zéro bug. Un code ludique mais industriel.",
@@ -421,7 +432,7 @@ const App = () => {
       icon: <Terminal className="w-10 h-10 text-teal-400" />
     },
     {
-      id: 3,
+      id: 4,
       title: "POC Redis VS Mongo",
       desc: "Comparaison de performance NoSQL sur une simulation type 'Uber Eats'.",
       longDesc: "Benchmark technique pour départager Redis et MongoDB sur du tracking GPS temps réel. Simulation de milliers d'écritures pour analyser latence et débit.",
@@ -432,7 +443,7 @@ const App = () => {
       icon: <Server className="w-10 h-10 text-teal-400" />
     },
     {
-      id: 4,
+      id: 5,
       title: "France Academy",
       desc: "Plateforme de gestion des formations et utilisateurs.",
       longDesc: "App web d'envergure sous Laravel. Gestion de rôles complexes (Admin, Prof, Élève) et relations de données imbriquées. Architecture MVC stricte et sécurisée.",
@@ -443,7 +454,7 @@ const App = () => {
       icon: <Globe className="w-10 h-10 text-teal-400" />
     },
     {
-      id: 5,
+      id: 6,
       title: "Stagelys",
       desc: "ERP de gestion des stages universitaires.",
       longDesc: "Digitalisation complète du processus de stage : conventions, signatures, rapports. Analyse fine des processus métiers de l'université.",
@@ -454,7 +465,7 @@ const App = () => {
       icon: <Database className="w-10 h-10 text-teal-400" />
     },
     {
-      id: 6, 
+      id: 7, 
       title: "Jeu du Fakir",
       desc: "Simulation Planche de Galton (Hackathon).",
       longDesc: "Projet Hackathon 24h. Simulation visuelle de probabilités mathématiques. Travail d'équipe sous haute pression. Visualisation des distributions normales.",
@@ -465,7 +476,7 @@ const App = () => {
       icon: <Code2 className="w-10 h-10 text-teal-400" />
     },
     {
-      id: 7,
+      id: 8,
       title: "Calculatrice Objet",
       desc: "Calculatrice architecturée en Pattern Command (POO).",
       longDesc: "Étude de cas POO. Utilisation du pattern Command pour encapsuler les opérations, rendant le code extensible sans toucher au cœur.",
