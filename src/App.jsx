@@ -1397,7 +1397,7 @@ const App = () => {
       
       <div className="space-y-6">
         {[
-          { name: "The Eight", tag: "Série Énigmatique", img: "src/assets/theight.jpeg", color: "group-hover:text-red-500" },
+          { name: "The Eight", tag: "Série Énigmatique", img: "/images/theight.jpeg", color: "group-hover:text-red-500" },
           { name: "Echoes of the Past", tag: "Drame Égyptien", img: "/images/passions/echo.webp", color: "group-hover:text-yellow-500" }
         ].map((item, i) => (
           <div key={i} className="flex items-center gap-4 group/item cursor-pointer">
@@ -1430,7 +1430,7 @@ const App = () => {
       
       <div className="space-y-6">
         {[
-          { name: "FC 27", tag: "Tactique", img: "src/assets/fc27.jpeg", color: "group-hover:text-purple-400" },
+          { name: "FC 27", tag: "Tactique", img: "/images/fc27.jpeg", color: "group-hover:text-purple-400" },
           { name: "The Last of Us", tag: "Narratif", img: "/images/last.jpg", color: "group-hover:text-cyan-500" }
         ].map((item, i) => (
           <div key={i} className="flex items-center gap-4 group/item cursor-pointer">
